@@ -1,3 +1,8 @@
+//Name:Finnnegan
+//Date:I wish
+//Period: Im a boy actually, i dont get those
+//Description: Fuck off
+
 #pragma once
 
 #include <iostream>
