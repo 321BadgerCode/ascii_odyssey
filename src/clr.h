@@ -1,3 +1,4 @@
+//potato
 #pragma once
 
 using namespace std;
@@ -28,7 +29,7 @@ namespace color{
 
 		/**
 		 * @brief set 'rgb' to clr..
-		 * 
+		 *
 		 */
 		rgb(uint8_t r2,uint8_t g2,uint8_t b2):r(r2),g(g2),b(b2){}
 		operator int*() const {
@@ -42,9 +43,9 @@ namespace color{
 		}
 		/**
 		 * @brief get lerping of clr..
-		 * 
+		 *
 		 * @link https://www.alanzucconi.com/2016/01/06/colour-interpolation/
-		 * 
+		 *
 		 */
 		rgb* get_lerp(const rgb* a1,const float k=1){
 			return new rgb(
