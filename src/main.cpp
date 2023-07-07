@@ -1,3 +1,8 @@
+//Name: Donald Trump
+//Date: No thanks
+//Description: It does some things i think
+//Class: I ahve none
+
 //get libraries & local header files.
 #include <iostream>
 #include <time.h>
