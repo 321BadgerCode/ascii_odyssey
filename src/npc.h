@@ -29,6 +29,7 @@ public:
 			cout<<color::set_clr("Type \"2\" to leave.",color::red)<<endl;
 			int b1=0;cin>>b1;clear();
 			if(b1==2){cout<<color::set_clr("Ok, I understand; you're a busy man. Have a good day :(",color::blue)<<endl;break;}
+			else if(a>=size-1){cout<<color::set_clr("Thank you so much sir. You will not regret this :)",color::green)<<endl;}
 		}
 	}
 };
