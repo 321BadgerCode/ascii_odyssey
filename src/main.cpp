@@ -13,7 +13,9 @@
 #include "./etc.h"
 #include "./map.h"
 #include "./name.h"
+#include "./npc.h"
 #include "./stats.h"
+#include "./vector.h"
 
 using namespace std;
 
@@ -198,7 +200,7 @@ int main(int argc,char** argv){
 
 setup:
 	/////////////////////////////////////////
-	map m1("../asset/map/2.txt");
+	/*map m1("../asset/map/2.txt");
 	while(true){
 		clear();
 		cout<<(string)m1<<endl;
@@ -220,7 +222,9 @@ setup:
 				m1.move_player(ao::vector<int>(0,1));
 				break;
 		}
-	}
+	}*/
+	npc n1("Billy",ao::vector<int>(5,5),new string[6]{"potato","pie","pancakes","party","pineapple",""});
+	n1.talk();
 	/////////////////////////////////////////
 	//get input from user such as player name & skill.
 	try{
