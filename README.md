@@ -15,53 +15,53 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 
 ## map region name ideas
 1. Goblin:
-	Goblin Grotto
-    Goblin Grove
-    Goblin Glade
-    Goblin Gulch
-    Goblin Gorge
+	* Goblin Grotto
+	* Goblin Grove
+	* Goblin Glade
+	* Goblin Gulch
+	* Goblin Gorge
 
 1. Troll:
-    Troll Tundra
-    Troll Timberland
-    Troll Territory
-    Troll Thicket
-    Troll Trail
+	* Troll Tundra
+	* Troll Timberland
+	* Troll Territory
+	* Troll Thicket
+	* Troll Trail
 
 1. Werewolf:
-    Werewolf Woods
-    Werewolf Warren
-    Werewolf Wilds
-    Werewolf Wasteland
-    Werewolf Watch
+	* Werewolf Woods
+	* Werewolf Warren
+	* Werewolf Wilds
+	* Werewolf Wasteland
+	* Werewolf Watch
 
 1. Vampire:
-    Vampire Valley
-    Vampire Vista
-    Vampire Veil
-    Vampire Village
-    Vampire Vault
+	* Vampire Valley
+	* Vampire Vista
+	* Vampire Veil
+	* Vampire Village
+	* Vampire Vault
 
 1. Dragon:
-    Dragon's Den
-    Dragon Domain
-    Dragon's Dale
-    Dragon's Descent
-    Dragon's Drift
+	* Dragon's Den
+	* Dragon Domain
+	* Dragon's Dale
+	* Dragon's Descent
+	* Dragon's Drift
 
 1. Lich:
-    Lich's Lair
-    Lich's Labyrinth
-    Lich's Library
-    Lich's Lost Land
-    Lich's Legacy
+	* Lich's Lair
+	* Lich's Labyrinth
+	* Lich's Library
+	* Lich's Lost Land
+	* Lich's Legacy
 
-1. Math Teacher (unique choice):
-    Numerical Nexus
-    Algebra Arena
-    Geometric Glade
-    Trigonometry Terrace
-    Calculus Corner
+1. Math Teacher:
+	* Numerical Nexus
+	* Algebra Arena
+	* Geometric Glade
+	* Trigonometry Terrace
+	* Calculus Corner
 
 ## gameplay
 ![](./gameplay/intro.jpg)  
