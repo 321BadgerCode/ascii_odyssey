@@ -223,7 +223,7 @@ setup:
 				break;
 		}
 	}*/
-	npc n1("Billy",ao::vector<int>(5,5),new string[6]{"potato","pie","pancakes","party","pineapple",""});
+	npc n1("Billy",ao::vector<int>(5,5),new string[6]{"Howdy there "+player.name+"!","These lands are spooky.","I saw a ghostly figure creep 'round the treachurous tree :O","I don't like ghosts.","Could you defeat the ghost for me?",""});
 	n1.talk();
 	/////////////////////////////////////////
 	//get input from user such as player name & skill.

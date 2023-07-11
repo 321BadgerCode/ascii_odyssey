@@ -14,7 +14,7 @@ public:
 	ao::vector<int> size;
 	ao::vector<int> player_pos;
 
-	map(const string& mapName, char* mapGrid, ao::vector<int> size, const ao::vector<int>& playerPosition):name(mapName), grid(mapGrid), size(size), player_pos(playerPosition) {}
+	map(const string& mapName, char* mapGrid, ao::vector<int> size, const ao::vector<int>& player_pos2):name(mapName),grid(mapGrid),size(size),player_pos(player_pos2){}
 	map(const string& filename){
 		ifstream file(filename);
 		if (!file.is_open()) {
@@ -110,3 +110,5 @@ public:
 		delete[] grid;
 	}
 };
+//TODO: npc_pos vector array to put into map in string cast overload.
+//	-if player touches npc similar to how it touches boundaries, npc talks w/ player.
