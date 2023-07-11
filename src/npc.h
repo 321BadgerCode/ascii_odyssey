@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <cstring>
+#include "./clr.h"
 #include "./console.h"
 #include "./vector.h"
 
@@ -24,10 +25,10 @@ public:
 
 		for(int a=0;a<size;a++){
 			cout<<dialogue[a]<<endl;
-			cout<<"Type \"1\" to "+(string)(a<size-1?"continue.":"help "+name+".")<<endl;
-			cout<<"Type \"2\" to leave."<<endl;
+			cout<<color::set_clr("Type \"1\" to "+(string)(a<size-1?"continue.":"help "+name+"."),color::green)<<endl;
+			cout<<color::set_clr("Type \"2\" to leave.",color::red)<<endl;
 			int b1=0;cin>>b1;clear();
-			if(b1==2){break;}
+			if(b1==2){cout<<color::set_clr("Ok, I understand; you're a busy man. Have a good day :(",color::blue)<<endl;break;}
 		}
 	}
 };
