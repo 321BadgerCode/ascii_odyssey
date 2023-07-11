@@ -1,7 +1,7 @@
 #pragma once
 
 namespace ao{
-	template<typename T>
+	template<typename T=int>
 	class vector{
 	public:
 		T x;
