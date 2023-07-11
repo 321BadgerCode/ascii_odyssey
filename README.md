@@ -13,6 +13,9 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 * Enemy Encounter
 * Monster Mash-up
 
+## map region name ideas
+* goblin ghetto
+
 ## gameplay
 ![](./gameplay/intro.jpg)  
 ![](./gameplay/enemies.jpg)  
