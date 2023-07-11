@@ -175,7 +175,7 @@ coda:
 //main function called when program runs.
 int main(int argc,char** argv){
 	//display logo for game.
-	ifstream file("./asset/txt/logo.txt");
+	ifstream file("../asset/txt/logo.txt");
 	string line;
 	int a=0;
 	while(getline(file,line)){
@@ -199,6 +199,7 @@ int main(int argc,char** argv){
 	cout<<endl;
 
 setup:
+	//TODO: implement rather than just using for testing.
 	/////////////////////////////////////////
 	/*map m1("../asset/map/2.txt");
 	while(true){
@@ -223,8 +224,8 @@ setup:
 				break;
 		}
 	}*/
-	npc n1("Billy",ao::vector<int>(5,5),new string[6]{"Howdy there "+player.name+"!","These lands are spooky.","I saw a ghostly figure creep 'round the treachurous tree :O","I don't like ghosts.","Could you defeat the ghost for me?",""});
-	n1.talk();
+	//npc n1("Billy",ao::vector<int>(5,5),new string[6]{"Howdy there "+player.name+"!","These lands are spooky.","I saw a ghostly figure creep 'round the treachurous tree :O","I don't like ghosts.","Could you defeat the ghost for me?",""});
+	//n1.talk();
 	/////////////////////////////////////////
 	//get input from user such as player name & skill.
 	try{
@@ -266,12 +267,13 @@ skill:
 	vector<string> adjectives=read_file("../asset/name/adj.txt");
 
 	//set enemies' stats.
-	/*for(int a=1;a<get_len(enemies);a++){
+	//FIXME: only for arena mode, not campaign.
+	for(int a=1;a<get_len(enemies);a++){
 		stats e1(generate_enemy_name(names,adjectives)+" "+get_capitalize(type_strings[a]),(float)1,(stats::type)a);
 		enemies[a]=e1;
 		cout<<(string)e1<<endl;
 		cout<<endl;
-	}*/
+	}
 
 	cout<<"[._.]: Press any key to continue...";cin.ignore();cin.get();
 	clear();
