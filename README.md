@@ -16,16 +16,6 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 * Monster Mash-up
 
 # how attack & heal is calculated
-$$
-\begin{align*}
-\textcolor{yellow}{\text{get\_random}}(\textcolor{lightblue}{\text{max}}, \textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{seed}}) & : \\
-& \quad \textcolor{lightblue}{\text{randomNumber}} \gets (\textcolor{lightblue}{\text{seed}} \times \textcolor{lightblue}{\text{a}} + \textcolor{lightblue}{\text{c}}) \mod \textcolor{lightblue}{\text{m}} \\
-& \quad \textcolor{lightblue}{\text{gamma}} \gets \frac{\textcolor{lightblue}{\text{randomNumber}}}{\textcolor{lightblue}{\text{m}}} \times (\textcolor{lightblue}{\text{max}} - \textcolor{lightblue}{\text{min}}) + \textcolor{lightblue}{\text{min}} \\
-& \quad \textcolor{purple}{\text{return}} \ \textcolor{lightblue}{\text{gamma}} \\\\
-\textcolor{lightblue}{max} > \textcolor{lightblue}{min}, \quad \textcolor{lightblue}{min} \in \mathbb{Z} \\
-\end{align*}
-$$
-
 **Glossary:**
 
 - $\textcolor{lightblue}{\text{seed}}$: Current seed value.
