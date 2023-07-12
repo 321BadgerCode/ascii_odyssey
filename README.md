@@ -28,12 +28,12 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 
 **Glossary:**
 
-- $\textcolor{lightblue}{\text{seed}}$: Current seed value.
-- $\textcolor{lightblue}{\text{a}}$: Multiplier.
-- $\textcolor{lightblue}{\text{c}}$: Increment.
-- $\textcolor{lightblue}{\text{m}}$: Modulus.
-- $\textcolor{lightblue}{\text{min}}$: Minimum value for the range of gamma function output.
-- $\textcolor{lightblue}{\text{max}}$: Maximum value for the range of gamma function output.
+* $\textcolor{lightblue}{\text{seed}}$: Current seed value.
+* $\textcolor{lightblue}{\text{a}}$: Multiplier.
+* $\textcolor{lightblue}{\text{c}}$: Increment.
+* $\textcolor{lightblue}{\text{m}}$: Modulus.
+* $\textcolor{lightblue}{\text{min}}$: Minimum value for the range of gamma function output.
+* $\textcolor{lightblue}{\text{max}}$: Maximum value for the range of gamma function output.
 
 ```math
 \begin{align*}
