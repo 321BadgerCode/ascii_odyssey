@@ -16,7 +16,7 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 * Monster Mash-up
 
 # how attack & heal is calculated
-$$
+```math
 \begin{align*}
 \textcolor{yellow}{\text{get\_random}}(\textcolor{lightblue}{\text{max}}, \textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{seed}}) & : \\
 & \quad \textcolor{lightblue}{\text{randomNumber}} \gets (\textcolor{lightblue}{\text{seed}} \times \textcolor{lightblue}{\text{a}} + \textcolor{lightblue}{\text{c}}) \mod \textcolor{lightblue}{\text{m}} \\
@@ -24,7 +24,7 @@ $$
 & \quad \textcolor{purple}{\text{return}} \ \textcolor{lightblue}{\text{gamma}} \\\\
 \textcolor{lightblue}{max} > \textcolor{lightblue}{min}, \quad \textcolor{lightblue}{min} \in \mathbb{Z} \\
 \end{align*}
-$$
+```
 
 **Glossary:**
 
@@ -35,23 +35,23 @@ $$
 - $\textcolor{lightblue}{\text{min}}$: Minimum value for the range of gamma function output.
 - $\textcolor{lightblue}{\text{max}}$: Maximum value for the range of gamma function output.
 
-$$
+```math
 \begin{align*}
 \textcolor{yellow}{\text{attack}}(\textcolor{lightblue}{\text{character}}) & : \\
 & \quad \textcolor{lightblue}{\text{min}} \gets \textcolor{lightblue}{\text{damage}} - \frac{\textcolor{lightblue}{\text{damage}}}{4} \\
 & \quad \textcolor{lightblue}{\text{damageTaken}} \gets \textcolor{lightblue}{\text{get\_random}}(\textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{min}} + \textcolor{lightblue}{\text{damage}}) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} - \textcolor{lightblue}{\text{damageTaken}} \\
 \end{align*}
-$$
+```
 
-$$
+```math
 \begin{align*}
 \textcolor{yellow}{\text{heal}}(\textcolor{lightblue}{\text{character}}) & : \\
 & \quad \textcolor{lightblue}{\text{max}} \gets \left\lfloor \frac{\textcolor{lightblue}{\text{health\_max}}}{5} \right\rfloor \\
 & \quad \textcolor{lightblue}{\text{healthGiven}} \gets \textcolor{lightblue}{\text{get\_random}}\left(\frac{\textcolor{lightblue}{\text{max}}}{2}, \textcolor{lightblue}{\text{max}}\right) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} + \textcolor{lightblue}{\text{healthGiven}} \\
 \end{align*}
-$$
+```
 
 ## map region name ideas
 1. **Goblin**:
