@@ -23,7 +23,7 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 
 # how attack & heal is calculated
 > **NOT UP TO DATE: switched from linear congruential RNG to mersenne twister!!!**<sub>([./src/etc.h](./src/etc.h))</sub>
-$$
+```math
 %get_random.
 \begin{align*}
 \textcolor{yellow}{\text{get\_random}}(\textcolor{lightblue}{\text{max}}, \textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{seed}}) & : \\
@@ -34,7 +34,7 @@ $$
 
 %constraint ineq..
 \textcolor{lightblue}{max} > \textcolor{lightblue}{min}, \quad \textcolor{lightblue}{min} \in \mathbb{Z}
-$$
+```
 
 **Glossary:**
 
@@ -45,7 +45,7 @@ $$
 * $\textcolor{lightblue}{\text{min}}$: Minimum value for the range of gamma function output.
 * $\textcolor{lightblue}{\text{max}}$: Maximum value for the range of gamma function output.
 
-$$
+```math
 %attack.
 \begin{align*}
 \textcolor{yellow}{\text{attack}}(\textcolor{lightblue}{\text{character}}) & : \\
@@ -53,9 +53,9 @@ $$
 & \quad \textcolor{lightblue}{\text{damageTaken}} \gets \textcolor{lightblue}{\text{get\_random}}(\textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{min}} + \textcolor{lightblue}{\text{damage}}) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} - \textcolor{lightblue}{\text{damageTaken}} \\
 \end{align*}
-$$
+```
 
-$$
+```math
 %heal.
 \begin{align*}
 \textcolor{yellow}{\text{heal}}(\textcolor{lightblue}{\text{character}}) & : \\
@@ -63,9 +63,12 @@ $$
 & \quad \textcolor{lightblue}{\text{healthGiven}} \gets \textcolor{lightblue}{\text{get\_random}}\left(\frac{\textcolor{lightblue}{\text{max}}}{2}, \textcolor{lightblue}{\text{max}}\right) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} + \textcolor{lightblue}{\text{healthGiven}} \\
 \end{align*}
-$$
+```
 
 ## arena round stats(4 nerds)
+$$
+\text{test}
+$$
 $$
 %var. def..
 \newcommand{\playerHealthMax}{100}
