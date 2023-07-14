@@ -66,7 +66,7 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 ```
 
 ## arena round stats(4 nerds)
-$$
+```math
 %var. def..
 \newcommand{\playerHealthMax}{100}
 \newcommand{\playerDamage}{10}
@@ -140,7 +140,7 @@ $$
 		\hline
 	\end{array}
 \end{gather*}
-$$
+```
 
 ## map region name ideas
 1. **Goblin**:
