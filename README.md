@@ -78,7 +78,9 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 \newcommand{\adversity}[1]{
 	\sum_{a=#1}^{a}((156.1 \times a)-214)+\sum_{a=#1}^{a}((14 \times a)-6.857)
 }
+```
 
+```math
 \begin{gather*}
 	\textbf{initial player values:} \\
 	\begin{cases}
