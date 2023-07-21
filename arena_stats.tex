@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{tikz,pgfplots}
+\usepackage{fancyhdr}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhead[CO,CE]{arena round data}
+	\fancyfoot[CO,CE]{badger code \& radiated gamer}
+	\fancyfoot[LE,RO]{\thepage}
+
+	\title{arena round stats(4 nerds)}
+	\author{badger code}
+	\date{2023-07-20}
+
+	\maketitle
+
+	%var. def..
+	\newcommand{\playerHealthMax}{100}
+	\newcommand{\playerDamage}{10}
+
+	%command def..
+	\newcommand{\note}[2]{
+		\underset{\text{#2}}{\underbrace{#1}}
+	}
+	\newcommand{\improvement}[1]{
+		\sum_{a=#1}^{a}((\note{20}{health multiplier} \times \note{a}{round})+\note{\playerHealthMax}{player.health\_max})+
+		\sum_{a=#1}^{a}((\note{10}{damage multiplier} \times a)+\note{\playerDamage}{player.damage})
+	}
+	\newcommand{\adversity}[1]{
+		\sum_{a=#1}^{a}((\note{156.1}{\text{health multiplier}} \times \note{a}{round})+\note{-214}{\text{health constant}})+
+		\sum_{a=#1}^{a}((\note{14}{\text{damage multiplier}} \times a)+\note{-6.857}{\text{damage constant}})
+	}
+	\newcommand{\improvementz}[1]{
+		((20*#1)+\playerHealthMax)+
+		((10*#1)+\playerDamage)
+	}
+	\newcommand{\adversityz}[1]{
+		((156.1*#1)-214)+
+		((14*#1)-6.857)
+	}
+
+	\begin{center}
+		\textbf{enemy data table:} \\
+		\begin{tabular}{||c|c|c|c||}
+			\hline
+			\text{Name}&\text{Health}&\text{Damage}&\text{Skill} \\
+			\hline\hline
+			\text{Goblin}&50&10&\text{Pilger} \\
+			\hline
+			\text{Troll}&100&20&\text{Troll's Blood} \\
+			\hline
+			\text{Werewolf}&175&35&\text{Howl} \\
+			\hline
+			\text{Vampire}&350&50&\text{Seduce} \\
+			\hline
+			\text{Dragon}&500&60&\text{Hellfire} \\
+			\hline
+			\text{Lich}&700&70&\text{Paralyze} \\
+			\hline
+			\text{Math Teacher}&999&99&\text{Fail} \\
+			\hline
+		\end{tabular} \\[2\baselineskip]
+		\textbf{line of best fit(using linear regression) for enemies' values:}
+		\[
+			\begin{cases}
+				y_{enemy\_health}=(156.1 \times x_{round})-214 \\
+				y_{enemy\_damage}=(14 \times x_{round})-6.857
+			\end{cases}
+		\]
+		\newpage
+		\textbf{stats. abt. da round:} \\
+		improvement=\(\improvement{1}\) \\
+		adversity=\(\adversity{1}\) \\
+		vec=\(\{improvement,adversity\}\) \\
+		difficulty=\(|\Delta vec|\) \\[2\baselineskip]
+		\textbf{ex.:} \\
+		$improvement_7$	=\(\improvement{7}\) \\
+				=320 \\
+		$adversity_7$	=\(\adversity{7}\) \\
+				=969.843 \\
+		$vec_7$=\{$improvement_7$,$adversity_7$\} \\
+		$difficulty_7$	=$|\Delta vec|$ \\
+				=$|320-969.843|$ \\
+				=$\boxed{649.843}_{\textcolor{red}{\text{Hard}}}$
+		\newpage
+		\textbf{difficulty chart:} \\
+		\begin{tabular}{||c|c||}
+			\hline
+			\text{qualitative}&\text{quantitative} \\
+			\hline\hline
+			\textcolor{green}{\text{Easy}}&\textcolor{green}{0-199} \\
+			\hline
+			\textcolor{yellow}{\text{Medium}}&\textcolor{yellow}{200-499} \\
+			\hline
+			\textcolor{red}{\text{Hard}}&\textcolor{red}{500+} \\
+			\hline
+		\end{tabular} \\[2\baselineskip]
+		\textbf{difficulties:} \\
+		\begin{tabular}{||c|c||}
+			\hline
+			\text{round}&\text{difficulty} \\
+			\hline\hline
+			1&\textcolor{green}{190.757} \\
+			\hline
+			2&\textcolor{green}{50.657} \\
+			\hline
+			3&\textcolor{green}{89.443} \\
+			\hline
+			4&\textcolor{yellow}{229.543} \\
+			\hline
+			5&\textcolor{yellow}{369.643} \\
+			\hline
+			6&\textcolor{red}{509.743} \\
+			\hline
+			7&\textcolor{red}{649.843} \\
+			\hline
+		\end{tabular} \\[2\baselineskip]
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={difficulty per arena round},
+				axis lines=left,
+				xlabel={round},
+				ylabel={\(f(x)\)},
+				legend pos=north west,
+				ymajorgrids=true,
+				grid style=dashed
+			]
+				\addplot[
+					domain=1:7,
+					samples=100,
+					color=red
+				]
+				{\improvementz{x}};
+				\addlegendentry{improvement}
+				\addplot[
+					domain=1:7,
+					samples=10,
+					color=blue
+				]
+				{\adversityz{x}};
+				\addlegendentry{adversity}
+				\addplot[
+					domain=1:7,
+					samples=10,
+					color=black
+				]
+				{abs((\improvementz{x})-(\adversityz{x}))};
+				\addlegendentry{difficulty}
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{document}
