@@ -57,7 +57,7 @@ As the player progresses through the game, they learn that the Math Teacher has 
 
 ## how attack & heal is calculated
 > **NOT UP TO DATE: switched from linear congruential RNG to mersenne twister!!!**<sub>([./src/etc.h](./src/etc.h))</sub>
-$$
+```math
 %get_random.
 \begin{align*}
 \textcolor{yellow}{\text{get\_random}}(\textcolor{lightblue}{\text{max}}, \textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{seed}}) &: \\
@@ -68,7 +68,7 @@ $$
 
 %constraint ineq..
 \textcolor{lightblue}{max} \geq \textcolor{lightblue}{min}, \quad \textcolor{lightblue}{min} \in \mathbb{W}
-$$
+```
 
 **Glossary:**
 
@@ -76,7 +76,7 @@ $$
 * $\textcolor{lightblue}{\text{c}}$: Increment.
 * $\textcolor{lightblue}{\text{m}}$: Modulus.
 
-$$
+```math
 %attack.
 \begin{align*}
 \textcolor{yellow}{\text{attack}}(\textcolor{lightblue}{\text{character}}) &: \\
@@ -84,9 +84,9 @@ $$
 & \quad \textcolor{lightblue}{\text{damageTaken}} \gets \textcolor{lightblue}{\text{get\_random}}(\textcolor{lightblue}{\text{min}}, \textcolor{lightblue}{\text{min}} + \textcolor{lightblue}{\text{damage}}) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} - \textcolor{lightblue}{\text{damageTaken}} \\
 \end{align*}
-$$
+```
 
-$$
+```math
 %heal.
 \begin{align*}
 \textcolor{yellow}{\text{heal}}(\textcolor{lightblue}{\text{character}}) &: \\
@@ -94,7 +94,7 @@ $$
 & \quad \textcolor{lightblue}{\text{healthGiven}} \gets \textcolor{lightblue}{\text{get\_random}}\left(\frac{\textcolor{lightblue}{\text{max}}}{2}, \textcolor{lightblue}{\text{max}}\right) \\
 & \quad \textcolor{lightblue}{\text{character.health}} \gets \textcolor{lightblue}{\text{character.health}} + \textcolor{lightblue}{\text{healthGiven}} \\
 \end{align*}
-$$
+```
 
 ## map region name ideas
 1. **Goblin**:
