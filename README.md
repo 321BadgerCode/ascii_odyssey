@@ -7,7 +7,7 @@ terminal game made w/ c++. this game was started by 2 students for the CPT final
 ![](./gameplay/intro.jpg)
 ![](./gameplay/enemies.jpg)
 ![](./gameplay/goblin.jpg)
-[![](./gameplay/1_img.jpg)](https://github.com/321BadgerCode/ascii_odyssey/assets/83559316/74d55652-1475-44a7-af04-a17dffdeb3fb)
+[![](./gameplay/1_img.jpg)](https://github.com/321BadgerCode/ascii_odyssey/assets/83559316/dfa0b343-bcb4-4512-a562-3ac77479e8f2)
 
 ## modes
 * **campaign**: walk around the map and complete quests given by NPCs that occupy the region. watch out for pesky 'lil monsters lurking in the shadows!
