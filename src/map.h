@@ -6,8 +6,9 @@
 #include "./vector.h"
 
 using namespace std;
-
+//Hi dylan i deleted your shit get ufcked
 class map{
+/*
 public:
 	string name;
 	char* grid;
@@ -109,6 +110,7 @@ public:
 	~map() {
 		delete[] grid;
 	}
+*/
 };
 //TODO: npc_pos vector array to put into map in string cast overload.
 //	-if player touches npc similar to how it touches boundaries, npc talks w/ player.
